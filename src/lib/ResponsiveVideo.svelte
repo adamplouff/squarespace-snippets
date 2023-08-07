@@ -1,4 +1,5 @@
 <script>
+  import { base } from "$app/paths";
   import { onMount } from 'svelte';
 
   // Define the breakpoint at which we'll switch videos
@@ -27,41 +28,90 @@
   $: isDesktop = $screenWidth >= breakpoint;
 
   // $: src = ($screenWidth >= breakpoint) ? `/video/desktop_landscape.mp4` : `/video/mobile_portrait.mp4`;
-  $: src = `/video/mobile_portrait.mp4`
+  $: src = `${ base }/video/mobile_portrait.mp4`
   $: {
     if ($screenWidth <= breakpoint) {
       // mobile
       if ($screenHeight > $screenWidth * breakFactor) {
         // portrait
-        src = `/video/mobile_portrait.mp4`;
+        src = `${ base }/video/mobile_portrait.mp4`;
       } else if ($screenWidth > $screenHeight * breakFactor) {
         // landscape
-        src = `/video/mobile_landscape.mp4`;
+        src = `${ base }/video/mobile_landscape.mp4`;
       } else {
         // square
-        src = `/video/mobile_square.mp4`;
+        src = `${ base }/video/mobile_square.mp4`;
       }
     } else {
       // desktop
       if ($screenHeight > $screenWidth * breakFactor) {
         // portrait
-        src = `/video/desktop_portrait.mp4`;
+        src = `${ base }/video/desktop_portrait.mp4`;
       } else if ($screenWidth > $screenHeight * breakFactor) {
         // landscape
-        src = `/video/desktop_landscape.mp4`;
+        src = `${ base }/video/desktop_landscape.mp4`;
       } else {
         // square
-        src = `/video/desktop_square.mp4`;
+        src = `${ base }/video/desktop_square.mp4`;
       }
     }
   }
+
+  const clickZones = [
+    {
+      left: '20%',
+      top: '10%',
+      width: '20%',
+      height: '10%',
+      url: 'https://www.battleaxe.co/overlord',
+    },
+    {
+      left: '70%',
+      top: '17%',
+      width: '20%',
+      height: '30%',
+      url: 'https://www.battleaxe.co/rubberhose',
+    },
+  ]
 </script>
 
-<video width="100%" src="{src}" loop autoplay muted>
+<div class="clickable">
+  {#each clickZones as clickZone}
+    <a href="{clickZone.url}">
+      <div class="click-zone" style="
+        margin-top: {clickZone.top}; 
+        margin-left: {clickZone.left}; 
+        width: {clickZone.width}; 
+        height: {clickZone.height};"></div>
+    </a>
+  {/each}
+  <!-- <div class="click-zone" style="width: {clickZone.width}; height: {clickZone.height} "></div> -->
+    
+</div>
+
+<video width="100%" src="{src}" loop autoplay muted playsinline>
   Your browser does not support the video tag.
 </video>
 
-
 <style>
+  .clickable {
+    position: absolute;
+    z-index: 10;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+  .click-zone {
+    position: absolute;
+    width: 10%;
+    cursor: pointer;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  video {
+    position: absolute;
+    top: 0;
 
+  }
 </style>

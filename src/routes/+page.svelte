@@ -2,11 +2,11 @@
 
 <script>
   import { base } from "$app/paths";
-  import ResponsiveVideo from "../lib/ResponsiveVideo.svelte";
 </script>
 
 <main>
-  <ResponsiveVideo />
+  Snippet playground
+
 </main>
 
 <style>
