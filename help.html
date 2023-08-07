@@ -6,84 +6,24 @@
     
 		<link href="./_app/immutable/assets/0.060d633d.css" rel="stylesheet">
 		<link href="./_app/immutable/assets/ProgressBar.4f1e9ba5.css" rel="stylesheet">
-		<link rel="modulepreload" href="./_app/immutable/entry/start.238d79e9.js">
+		<link rel="modulepreload" href="./_app/immutable/entry/start.e3659c86.js">
 		<link rel="modulepreload" href="./_app/immutable/chunks/scheduler.6684f6f4.js">
-		<link rel="modulepreload" href="./_app/immutable/chunks/singletons.dba8b466.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/singletons.ba21f7fe.js">
 		<link rel="modulepreload" href="./_app/immutable/chunks/index.4ceb20c2.js">
-		<link rel="modulepreload" href="./_app/immutable/chunks/paths.2c9205ea.js">
-		<link rel="modulepreload" href="./_app/immutable/entry/app.87985b16.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/paths.b3661b67.js">
+		<link rel="modulepreload" href="./_app/immutable/entry/app.f68c7022.js">
 		<link rel="modulepreload" href="./_app/immutable/chunks/index.56fbbae0.js">
-		<link rel="modulepreload" href="./_app/immutable/nodes/0.8e101411.js">
+		<link rel="modulepreload" href="./_app/immutable/nodes/0.4ab7d100.js">
 		<link rel="modulepreload" href="./_app/immutable/chunks/ProgressBar.svelte_svelte_type_style_lang.41ebb3d8.js">
-		<link rel="modulepreload" href="./_app/immutable/nodes/4.75556ea1.js">
-		<link rel="modulepreload" href="./_app/immutable/chunks/Codeblock.077958fe.js"><title>Help + battleaxe.co</title><!-- HEAD_svelte-1dr3nvs_START --><!-- HEAD_svelte-1dr3nvs_END -->
+		<link rel="modulepreload" href="./_app/immutable/nodes/4.0165c2d6.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/Codeblock.db462242.js"><title>Help + battleaxe.co</title><!-- HEAD_svelte-1dr3nvs_START --><!-- HEAD_svelte-1dr3nvs_END -->
   </head>
   <body>
-    <div style="display: contents" class="h-full overflow-hidden">  <div id="appShell" class="w-full h-full flex flex-col overflow-hidden " data-testid="app-shell"> <header id="shell-header" class="flex-none z-10"><div class="bg-surface-700 p-4" data-svelte-h="svelte-unqd2o">Header</div> </header>  <div class="flex-auto w-full h-full flex overflow-hidden"> <aside id="sidebar-left" class="flex-none overflow-x-hidden overflow-y-auto w-56 p-4 bg-surface-600"><ul><li class="text-2xl font-bold mb-4"><a href="/squarespace-snippets/">/</a> </li><li class="text-2xl font-bold mb-4"><a href="/squarespace-snippets/help">/help</a> </li><li class="text-2xl font-bold mb-4"><a href="/squarespace-snippets/product">/product</a> </li></ul> </aside>  <div id="page" class=" flex-1 overflow-x-hidden flex flex-col">   <main id="page-content" class="flex-auto ">   <div class=""> <main><div class="bg-surface-800 p-8" data-svelte-h="svelte-ooz9zj"><toc></toc></div> <hr> <div class="p-4" data-svelte-h="svelte-wwrgq"><h2>Purchasing</h2> <h4>When do I get my download?</h4> <h3>Immediately</h3> <p>As soon as you purchase you will receive an email from @paddle.com with a confirmation receipt, then a second email from @battleaxe.co with the license key and download info.</p> <p>If you do not receive both of these emails, check the spam folder.</p> <p>If they aren’t in the spam folder, the email address could have been misspelled at checkout. Send us a message and we will look into the issue.</p> <h4>Another question?</h4> <h3>Immediately</h3> <p>As soon as you purchase you will receive an email from @paddle.com with a confirmation receipt, then a second email from @battleaxe.co with the license key and download info.</p> <p>If you do not receive both of these emails, check the spam folder.</p> <p>If they aren’t in the spam folder, the email address could have been misspelled at checkout. Send us a message and we will look into the issue.</p></div>  <div class="codeblock overflow-hidden shadow bg-neutral-900/90  text-sm text-white rounded-container-token shadow  m-16" data-testid="codeblock"> <header class="codeblock-header text-xs text-white/50 uppercase flex justify-between items-center p-2 pl-4"> <span class="codeblock-language">html</span>  <button class="codeblock-btn btn btn-sm variant-soft !text-white">Copy</button></header>  <pre class="codeblock-pre whitespace-pre-wrap break-all p-4 pt-1"><code class="codeblock-code language-html lineNumbers"><!-- HTML_TAG_START --><span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="language-javascript">
-<span class="hljs-variable language_">window</span>.<span class="hljs-title function_">addEventListener</span>(<span class="hljs-string">&quot;DOMContentLoaded&quot;</span>, <span class="hljs-function">(<span class="hljs-params">event</span>) =&gt;</span> {
-      <span class="hljs-keyword">var</span> permalinkElements = <span class="hljs-title class_">Array</span>.<span class="hljs-title function_">from</span>(<span class="hljs-variable language_">document</span>.<span class="hljs-title function_">querySelectorAll</span>(<span class="hljs-string">&quot;h2, h4&quot;</span>));
-    <span class="hljs-keyword">var</span> tocElement = <span class="hljs-variable language_">document</span>.<span class="hljs-title function_">querySelector</span>(<span class="hljs-string">&quot;toc&quot;</span>);
-    <span class="hljs-keyword">var</span> tocArray = [];
-    <span class="hljs-keyword">var</span> tableOfContents = <span class="hljs-variable language_">document</span>.<span class="hljs-title function_">createElement</span>(<span class="hljs-string">&quot;div&quot;</span>);
-    tableOfContents.<span class="hljs-title function_">setAttribute</span>(<span class="hljs-string">&quot;class&quot;</span>, <span class="hljs-string">&quot;toc&quot;</span>);
-    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">var</span> i = <span class="hljs-number">0</span>; i &lt; permalinkElements.<span class="hljs-property">length</span>; i++) {
-      <span class="hljs-keyword">var</span> element = permalinkElements[i];
-      <span class="hljs-keyword">var</span> text = element.<span class="hljs-property">innerText</span>.<span class="hljs-title function_">trim</span>();
-      <span class="hljs-keyword">var</span> id = text.<span class="hljs-title function_">toLowerCase</span>().<span class="hljs-title function_">replace</span>(<span class="hljs-regexp">/\s+/g</span>, <span class="hljs-string">&quot;-&quot;</span>).<span class="hljs-title function_">replace</span>(<span class="hljs-regexp">/[^a-zA-Z0-9\-]/g</span>, <span class="hljs-string">&quot;&quot;</span>);
-      <span class="hljs-keyword">if</span> (element.<span class="hljs-property">tagName</span> === <span class="hljs-string">&quot;H2&quot;</span>) {
-        <span class="hljs-keyword">var</span> newElement = <span class="hljs-variable language_">document</span>.<span class="hljs-title function_">createElement</span>(<span class="hljs-string">&quot;h2&quot;</span>);
-        newElement.<span class="hljs-title function_">setAttribute</span>(<span class="hljs-string">&quot;id&quot;</span>, id);
-        newElement.<span class="hljs-title function_">appendChild</span>(<span class="hljs-variable language_">document</span>.<span class="hljs-title function_">createTextNode</span>(text));
-        element.<span class="hljs-property">parentNode</span>.<span class="hljs-title function_">replaceChild</span>(newElement, element);
-        tocArray.<span class="hljs-title function_">push</span>({
-          <span class="hljs-attr">text</span>: element.<span class="hljs-property">innerText</span>.<span class="hljs-title function_">trim</span>(),
-          id,
-          <span class="hljs-attr">children</span>: []
-        });
-      } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (element.<span class="hljs-property">tagName</span> === <span class="hljs-string">&quot;H4&quot;</span>) {
-        <span class="hljs-keyword">var</span> newElement = element.<span class="hljs-property">tagName</span> === <span class="hljs-string">&quot;H3&quot;</span> ? <span class="hljs-variable language_">document</span>.<span class="hljs-title function_">createElement</span>(<span class="hljs-string">&quot;h3&quot;</span>) : element.<span class="hljs-property">tagName</span> === <span class="hljs-string">&quot;H4&quot;</span> ? <span class="hljs-variable language_">document</span>.<span class="hljs-title function_">createElement</span>(<span class="hljs-string">&quot;h4&quot;</span>) : <span class="hljs-literal">null</span>;
-        newElement.<span class="hljs-title function_">setAttribute</span>(<span class="hljs-string">&quot;id&quot;</span>, id);
-        <span class="hljs-keyword">var</span> anchorLink = <span class="hljs-variable language_">document</span>.<span class="hljs-title function_">createElement</span>(<span class="hljs-string">&quot;a&quot;</span>);
-        anchorLink.<span class="hljs-title function_">setAttribute</span>(<span class="hljs-string">&quot;href&quot;</span>, <span class="hljs-string">&quot;#&quot;</span> + id);
-        anchorLink.<span class="hljs-title function_">setAttribute</span>(<span class="hljs-string">&quot;class&quot;</span>, <span class="hljs-string">&quot;permalink&quot;</span>);
-        anchorLink.<span class="hljs-property">innerHTML</span> = <span class="hljs-string">&quot;#&quot;</span>;
-        newElement.<span class="hljs-title function_">appendChild</span>(anchorLink);
-        <span class="hljs-keyword">var</span> textNode = <span class="hljs-variable language_">document</span>.<span class="hljs-title function_">createTextNode</span>(text);
-        newElement.<span class="hljs-title function_">appendChild</span>(textNode);
-        element.<span class="hljs-property">parentNode</span>.<span class="hljs-title function_">replaceChild</span>(newElement, element);
-        tocArray[tocArray.<span class="hljs-property">length</span> - <span class="hljs-number">1</span>].<span class="hljs-property">children</span>.<span class="hljs-title function_">push</span>({ text, id });
-      }
-    }
-    <span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(<span class="hljs-string">&quot;tocArray&quot;</span>, tocArray);
-    tocArray.<span class="hljs-title function_">forEach</span>(<span class="hljs-keyword">function</span>(<span class="hljs-params">element2</span>) {
-      <span class="hljs-keyword">var</span> section = <span class="hljs-variable language_">document</span>.<span class="hljs-title function_">createElement</span>(<span class="hljs-string">&quot;div&quot;</span>);
-      <span class="hljs-keyword">var</span> headingLink = <span class="hljs-variable language_">document</span>.<span class="hljs-title function_">createElement</span>(<span class="hljs-string">&quot;a&quot;</span>);
-      headingLink.<span class="hljs-title function_">setAttribute</span>(<span class="hljs-string">&quot;href&quot;</span>, <span class="hljs-string">&quot;#&quot;</span> + element2.<span class="hljs-property">id</span>);
-      <span class="hljs-keyword">var</span> heading = <span class="hljs-variable language_">document</span>.<span class="hljs-title function_">createElement</span>(<span class="hljs-string">&quot;h3&quot;</span>);
-      <span class="hljs-keyword">var</span> h2Text = element2.<span class="hljs-property">text</span>;
-      heading.<span class="hljs-property">textContent</span> = h2Text;
-      headingLink.<span class="hljs-title function_">appendChild</span>(heading);
-      section.<span class="hljs-title function_">appendChild</span>(headingLink);
-      <span class="hljs-keyword">var</span> subList = <span class="hljs-variable language_">document</span>.<span class="hljs-title function_">createElement</span>(<span class="hljs-string">&quot;ul&quot;</span>);
-      element2.<span class="hljs-property">children</span>.<span class="hljs-title function_">forEach</span>(<span class="hljs-keyword">function</span>(<span class="hljs-params">child</span>) {
-        <span class="hljs-keyword">var</span> subHeading = <span class="hljs-variable language_">document</span>.<span class="hljs-title function_">createElement</span>(<span class="hljs-string">&quot;li&quot;</span>);
-        <span class="hljs-keyword">var</span> anchorLink2 = <span class="hljs-variable language_">document</span>.<span class="hljs-title function_">createElement</span>(<span class="hljs-string">&quot;a&quot;</span>);
-        anchorLink2.<span class="hljs-title function_">setAttribute</span>(<span class="hljs-string">&quot;href&quot;</span>, <span class="hljs-string">&quot;#&quot;</span> + child.<span class="hljs-property">id</span>);
-        <span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(child.<span class="hljs-property">text</span>);
-        anchorLink2.<span class="hljs-property">innerHTML</span> = child.<span class="hljs-property">text</span>;
-        subHeading.<span class="hljs-title function_">appendChild</span>(anchorLink2);
-        subList.<span class="hljs-title function_">appendChild</span>(subHeading);
-      });
-      section.<span class="hljs-title function_">appendChild</span>(subList);
-      tableOfContents.<span class="hljs-title function_">appendChild</span>(section);
-    });
-    tocElement.<span class="hljs-property">parentNode</span>.<span class="hljs-title function_">replaceChild</span>(tableOfContents, tocElement);
-});
-</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span><!-- HTML_TAG_END --></code></pre></div></main></div>   </main>  </div>  </div>  </div> 
+    <div style="display: contents" class="h-full overflow-hidden">  <div id="appShell" class="w-full h-full flex flex-col overflow-hidden " data-testid="app-shell"> <header id="shell-header" class="flex-none z-10"><div class="bg-surface-700 p-4" data-svelte-h="svelte-unqd2o">Header</div> </header>  <div class="flex-auto w-full h-full flex overflow-hidden"> <aside id="sidebar-left" class="flex-none overflow-x-hidden overflow-y-auto w-56 p-4 bg-surface-600"><ul><li class="text-2xl font-bold mb-4"><a href="/squarespace-snippets/">/</a> </li><li class="text-2xl font-bold mb-4"><a href="/squarespace-snippets/help">/help</a> </li><li class="text-2xl font-bold mb-4"><a href="/squarespace-snippets/product">/product</a> </li></ul> </aside>  <div id="page" class=" flex-1 overflow-x-hidden flex flex-col">   <main id="page-content" class="flex-auto ">   <div class=""> <main><div class="bg-surface-800 p-8" data-svelte-h="svelte-ooz9zj"><toc></toc></div> <hr> <div class="p-4" data-svelte-h="svelte-wwrgq"><h2>Purchasing</h2> <h4>When do I get my download?</h4> <h3>Immediately</h3> <p>As soon as you purchase you will receive an email from @paddle.com with a confirmation receipt, then a second email from @battleaxe.co with the license key and download info.</p> <p>If you do not receive both of these emails, check the spam folder.</p> <p>If they aren’t in the spam folder, the email address could have been misspelled at checkout. Send us a message and we will look into the issue.</p> <h4>Another question?</h4> <h3>Immediately</h3> <p>As soon as you purchase you will receive an email from @paddle.com with a confirmation receipt, then a second email from @battleaxe.co with the license key and download info.</p> <p>If you do not receive both of these emails, check the spam folder.</p> <p>If they aren’t in the spam folder, the email address could have been misspelled at checkout. Send us a message and we will look into the issue.</p></div>  </main></div>   </main>  </div>  </div>  </div> 
 			
 			<script>
 				{
-					__sveltekit_fqezr1 = {
+					__sveltekit_1g1e4xp = {
 						assets: "/squarespace-snippets",
 						base: new URL(".", location).pathname.slice(0, -1),
 						env: {}
@@ -94,8 +34,8 @@
 					const data = [null,null];
 
 					Promise.all([
-						import("./_app/immutable/entry/start.238d79e9.js"),
-						import("./_app/immutable/entry/app.87985b16.js")
+						import("./_app/immutable/entry/start.e3659c86.js"),
+						import("./_app/immutable/entry/app.f68c7022.js")
 					]).then(([kit, app]) => {
 						kit.start(app, element, {
 							node_ids: [0, 4],
