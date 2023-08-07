@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    
+		<link rel="modulepreload" href="./_app/immutable/entry/start.00121e34.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/scheduler.e108d1fd.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/singletons.da71bf13.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/paths.3f253183.js">
+		<link rel="modulepreload" href="./_app/immutable/entry/app.937e28d4.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/index.63e0e998.js">
+		<link rel="modulepreload" href="./_app/immutable/nodes/0.5f289e90.js">
+		<link rel="modulepreload" href="./_app/immutable/nodes/4.22ad6506.js"><title>Help + battleaxe.co</title><!-- HEAD_svelte-1dr3nvs_START --><!-- HEAD_svelte-1dr3nvs_END -->
+  </head>
+  <body>
+    <div>   <main><div data-svelte-h="svelte-16af2jp">TOC
+    <toc></toc></div> <hr> <div data-svelte-h="svelte-rmhmdn"><h2>Purchasing</h2> <h4>When do I get my download?</h4> <h3>Immediately</h3> <p>As soon as you purchase you will receive an email from @paddle.com with a confirmation receipt, then a second email from @battleaxe.co with the license key and download info.</p> <p>If you do not receive both of these emails, check the spam folder.</p> <p>If they aren’t in the spam folder, the email address could have been misspelled at checkout. Send us a message and we will look into the issue.</p></div> <hr> <div><h1 data-svelte-h="svelte-cklekp">Snippet</h1> () => {
+    var permalinkElements = Array.from(document.querySelectorAll("h2, h4"));
+    var tocElement = document.querySelector("toc");
+    var tocArray = [];
+    var tableOfContents = document.createElement("div");
+    tableOfContents.setAttribute("class", "toc");
+    for (var i = 0; i &lt; permalinkElements.length; i++) {
+      var element = permalinkElements[i];
+      var text = element.innerText.trim();
+      var id = text.toLowerCase().replace(/\s+/g, "-").replace(/[^a-zA-Z0-9\-]/g, "");
+      if (element.tagName === "H2") {
+        var newElement = document.createElement("h2");
+        newElement.setAttribute("id", id);
+        newElement.appendChild(document.createTextNode(text));
+        element.parentNode.replaceChild(newElement, element);
+        tocArray.push({
+          text: element.innerText.trim(),
+          id,
+          children: []
+        });
+      } else if (element.tagName === "H4") {
+        var newElement = element.tagName === "H3" ? document.createElement("h3") : element.tagName === "H4" ? document.createElement("h4") : null;
+        newElement.setAttribute("id", id);
+        var anchorLink = document.createElement("a");
+        anchorLink.setAttribute("href", "#" + id);
+        anchorLink.setAttribute("class", "permalink");
+        anchorLink.innerHTML = "#";
+        newElement.appendChild(anchorLink);
+        var textNode = document.createTextNode(text);
+        newElement.appendChild(textNode);
+        element.parentNode.replaceChild(newElement, element);
+        tocArray[tocArray.length - 1].children.push({ text, id });
+      }
+    }
+    console.log("tocArray", tocArray);
+    tocArray.forEach(function(element2) {
+      var section = document.createElement("div");
+      var headingLink = document.createElement("a");
+      headingLink.setAttribute("href", "#" + element2.id);
+      var heading = document.createElement("h3");
+      var h2Text = element2.text;
+      heading.textContent = h2Text;
+      headingLink.appendChild(heading);
+      section.appendChild(headingLink);
+      var subList = document.createElement("ul");
+      element2.children.forEach(function(child) {
+        var subHeading = document.createElement("li");
+        var anchorLink2 = document.createElement("a");
+        anchorLink2.setAttribute("href", "#" + child.id);
+        console.log(child.text);
+        anchorLink2.innerHTML = child.text;
+        subHeading.appendChild(anchorLink2);
+        subList.appendChild(subHeading);
+      });
+      section.appendChild(subList);
+      tableOfContents.appendChild(section);
+    });
+    tocElement.parentNode.replaceChild(tableOfContents, tocElement);
+  }</div></main> 
+			
+			<script>
+				{
+					__sveltekit_nxm2s2 = {
+						assets: "/squarespace-playground",
+						base: new URL(".", location).pathname.slice(0, -1),
+						env: {}
+					};
+
+					const element = document.currentScript.parentElement;
+
+					const data = [null,null];
+
+					Promise.all([
+						import("./_app/immutable/entry/start.00121e34.js"),
+						import("./_app/immutable/entry/app.937e28d4.js")
+					]).then(([kit, app]) => {
+						kit.start(app, element, {
+							node_ids: [0, 4],
+							data,
+							form: null,
+							error: null
+						});
+					});
+				}
+			</script>
+		</div>
+  </body>
+</html>
