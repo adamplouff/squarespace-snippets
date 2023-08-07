@@ -112,3 +112,4 @@ First, build the app by running `yarn build`.
 
 Then, run `yarn deploy` to deploy the app to GitHub Pages.
 # responsive-video
+# squarespace-snippets
